@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Naziv</th>
+        <th>Masinovodja</th>
+        <th>Registarska oznaka</th>
+        <th>Geografska duzina</th>
+        <th>Geografska sirina</th>
+    </tr>
+    <tr *ngFor='let voz of vozovi'>
+        <td>{{voz.naziv}}</td>
+        <td>{{voz.masinovodja}}</td>
+        <td>{{voz.registarskaOznaka}}</td>
+        <td>{{voz.geografskaDuzina}}</td>
+        <td>{{voz.geografskaSirina}}</td>
+        <td *ngIf='moguceAzurirati(voz)'>
+            <button class='button2' (click)='azuriraj(voz)'>Azuriraj</button>
+        </td>
+    </tr>
+</table>
+<button class='button' (click)='odjaviSe()'>Odjavi se</button>
